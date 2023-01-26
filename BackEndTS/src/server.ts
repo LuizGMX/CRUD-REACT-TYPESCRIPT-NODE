@@ -1,7 +1,8 @@
 import express from "express";
-import clients from "../routes/apis/clients/clients";
+import router from "./apis/routes";
+
 const app = express();
 
-app.use("/clients", clients);
+app.use(router);
 
 app.listen(3000, () => console.log("Rodou!"));
